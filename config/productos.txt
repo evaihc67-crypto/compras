@@ -1,0 +1,44 @@
+# Productos que se buscan en las webs que no publican su catálogo completo.
+# Formato:  Categoría | texto a buscar      (añade o quita líneas libremente)
+Lácteos | leche entera
+Lácteos | leche semidesnatada
+Lácteos | yogur natural
+Lácteos | queso tierno
+Lácteos | mantequilla
+Despensa | aceite de oliva virgen extra
+Despensa | aceite de girasol
+Despensa | gofio
+Despensa | arroz
+Despensa | macarrones
+Despensa | espaguetis
+Despensa | lentejas
+Despensa | garbanzos
+Despensa | azúcar
+Despensa | harina
+Despensa | sal
+Despensa | café molido
+Despensa | cacao soluble
+Despensa | galletas
+Despensa | tomate frito
+Despensa | atún en aceite
+Frescos | huevos
+Frescos | plátano de canarias
+Frescos | papas
+Frescos | tomate
+Frescos | cebolla
+Frescos | manzana
+Carne y pescado | pechuga de pollo
+Carne y pescado | carne picada
+Carne y pescado | jamón cocido
+Panadería | pan de molde
+Bebidas | agua mineral
+Bebidas | refresco cola
+Bebidas | cerveza
+Bebidas | zumo de naranja
+Limpieza | detergente
+Limpieza | lavavajillas
+Limpieza | papel higiénico
+Limpieza | lejía
+Higiene | gel de ducha
+Higiene | champú
+Higiene | pasta de dientes

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compras Económicas</title>
+<meta name="theme-color" content="#0f6b5c">
+<meta name="description" content="Compara precios de supermercados en Canarias">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Compras">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">€</span>
+    <div>
+      <h1>Compras Económicas</h1>
+      <p id="estado-datos" class="sub">Cargando precios…</p>
+    </div>
+  </div>
+  <button id="btn-refrescar" class="icon-btn" aria-label="Actualizar precios" title="Actualizar precios">⟳</button>
+</header>
+
+<main>
+  <!-- BUSCAR -->
+  <section id="vista-buscar" class="vista activa">
+    <div class="buscador">
+      <input id="q" type="search" placeholder="Busca un producto: leche, aceite, gofio…" autocomplete="off" enterkeyhint="search">
+    </div>
+    <div id="chips-categorias" class="chips"></div>
+    <div id="resultados"></div>
+  </section>
+
+  <!-- CESTA -->
+  <section id="vista-cesta" class="vista">
+    <div class="cabecera-vista">
+      <h2>Cesta de la compra</h2>
+      <button id="btn-vaciar" class="btn-texto">Vaciar</button>
+    </div>
+    <div id="cesta"></div>
+  </section>
+
+  <!-- ALERTAS -->
+  <section id="vista-alertas" class="vista">
+    <div class="cabecera-vista"><h2>Alertas de ofertas</h2></div>
+    <p class="ayuda">Te avisamos cuando un producto que vigilas esté en oferta en alguno de tus supermercados activos.</p>
+    <form id="form-alerta" class="fila-form">
+      <input id="nueva-alerta" placeholder="Ej.: aceite de oliva" required>
+      <button class="btn">Vigilar</button>
+    </form>
+    <div id="lista-alertas"></div>
+    <div id="ofertas-alertas"></div>
+    <div class="tarjeta">
+      <h3>Avisos en el móvil</h3>
+      <p class="ayuda">Los avisos de la app llegan cuando se actualizan los precios. Para recibirlos aunque la app esté cerrada, usa la app gratuita <b>ntfy</b> (ver guía).</p>
+      <button id="btn-permiso" class="btn secundario">Activar notificaciones</button>
+      <button id="btn-copiar-alertas" class="btn secundario">Copiar lista para el servidor</button>
+    </div>
+  </section>
+
+  <!-- AJUSTES -->
+  <section id="vista-ajustes" class="vista">
+    <div class="cabecera-vista"><h2>Supermercados</h2></div>
+    <p class="ayuda">Activa solo los que quieras comparar.</p>
+    <div id="lista-tiendas"></div>
+
+    <div class="cabecera-vista"><h2>Añadir precio a mano</h2></div>
+    <p class="ayuda">Para tiendas sin web (Chacón, Roper, Cinco Océanos…) o para corregir un precio.</p>
+    <form id="form-manual" class="form-manual">
+      <select id="m-tienda" required></select>
+      <input id="m-nombre" placeholder="Producto (ej.: Leche entera 1 L)" required>
+      <div class="fila-form">
+        <input id="m-precio" type="number" step="0.01" min="0" inputmode="decimal" placeholder="Precio €" required>
+        <label class="check"><input id="m-oferta" type="checkbox"> En oferta</label>
+      </div>
+      <button class="btn">Guardar precio</button>
+    </form>
+    <div id="lista-manual"></div>
+
+    <div class="cabecera-vista"><h2>Origen de los datos</h2></div>
+    <p class="ayuda">Dirección del archivo de precios que genera tu servidor gratuito. Déjalo así si la app está alojada en el mismo GitHub.</p>
+    <form id="form-fuente" class="fila-form">
+      <input id="fuente" placeholder="data/precios.json">
+      <button class="btn secundario">Guardar</button>
+    </form>
+  </section>
+</main>
+
+<nav class="tabs" role="tablist">
+  <button data-vista="buscar" class="tab activa"><span>🔍</span>Buscar</button>
+  <button data-vista="cesta" class="tab"><span>🧺</span>Cesta<b id="contador-cesta" class="badge" hidden>0</b></button>
+  <button data-vista="alertas" class="tab"><span>🔔</span>Alertas<b id="contador-alertas" class="badge" hidden>0</b></button>
+  <button data-vista="ajustes" class="tab"><span>⚙️</span>Ajustes</button>
+</nav>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

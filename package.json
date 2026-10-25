@@ -1,0 +1,7 @@
+{
+  "name": "compras-economicas",
+  "private": true,
+  "type": "module",
+  "scripts": { "actualizar": "node scraper/index.mjs" },
+  "engines": { "node": ">=20" }
+}
