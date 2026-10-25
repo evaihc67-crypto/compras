@@ -2,14 +2,14 @@
 'use strict';
 
 const TIENDAS = [
-  { id: 'mercadona',    nombre: 'Mercadona',      color: '#1f8a4c', fuente: 'Web (automático)' },
-  { id: 'hiperdino',    nombre: 'HiperDino',      color: '#e4572e', fuente: 'Web (automático)' },
-  { id: 'lidl',         nombre: 'Lidl',           color: '#1d5fbf', fuente: 'Ofertas/folleto (automático)' },
-  { id: 'aldi',         nombre: 'Aldi',           color: '#2a3a8c', fuente: 'Ofertas/folleto (automático)' },
-  { id: 'carrefour',    nombre: 'Carrefour',      color: '#3b7dd8', fuente: 'Web (automático)' },
-  { id: 'alcampo',      nombre: 'Alcampo',        color: '#c8102e', fuente: 'Web (automático)' },
-  { id: 'elcorteingles', nombre: 'El Corte Inglés', color: '#2e7d32', fuente: 'Web (automático)' },
-  { id: 'hipercor',     nombre: 'Hipercor',       color: '#d97706', fuente: 'Web (automático)' },
+  { id: 'mercadona',    nombre: 'Mercadona',      color: '#1f8a4c', fuente: 'Catálogo de Lanzarote (automático)' },
+  { id: 'hiperdino',    nombre: 'HiperDino',      color: '#e4572e', fuente: 'Catálogo de Lanzarote (automático)' },
+  { id: 'lidl',         nombre: 'Lidl',           color: '#1d5fbf', fuente: 'Manual (su web no da precios de Canarias)' },
+  { id: 'aldi',         nombre: 'Aldi',           color: '#2a3a8c', fuente: 'Ofertas de Canarias (automático)' },
+  { id: 'carrefour',    nombre: 'Carrefour',      color: '#3b7dd8', fuente: 'Manual (su web bloquea la lectura)' },
+  { id: 'alcampo',      nombre: 'Alcampo',        color: '#c8102e', fuente: 'Tienda online, precios de península (automático)' },
+  { id: 'elcorteingles', nombre: 'El Corte Inglés', color: '#2e7d32', fuente: 'Manual' },
+  { id: 'hipercor',     nombre: 'Hipercor',       color: '#d97706', fuente: 'Manual' },
   { id: 'chacon',       nombre: 'Chacón',         color: '#8a5a2b', fuente: 'Manual' },
   { id: 'roper',        nombre: 'Roper',          color: '#7b3fa0', fuente: 'Manual' },
   { id: 'cincooceanos', nombre: 'Cinco Océanos',  color: '#0e8fa3', fuente: 'Manual' },

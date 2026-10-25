@@ -1,5 +1,5 @@
 /* Service worker: la app funciona sin conexión y muestra notificaciones */
-const CACHE = 'compras-v2';
+const CACHE = 'compras-v3';
 const BASE = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', e => {

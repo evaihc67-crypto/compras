@@ -49,17 +49,16 @@ La app también avisa por su cuenta cuando la abres y hay ofertas nuevas en lo q
 
 ## Qué datos tiene cada supermercado
 
-| Supermercado | Cómo se obtiene | Estado |
+| Supermercado | Cómo se obtiene | Qué precios |
 |---|---|---|
-| Mercadona | Catálogo completo de su tienda online, según código postal | Debería funcionar desde el primer día |
-| HiperDino | Búsqueda en su tienda online | Experimental: puede necesitar ajustar la URL |
-| Carrefour | Búsqueda en su tienda online | Experimental; los precios online pueden ser de península |
-| Alcampo | Búsqueda en su tienda online | Experimental; los precios online pueden ser de península |
-| El Corte Inglés (supermercado) | Búsqueda en su tienda online | Experimental; los precios online pueden ser de península |
-| Hipercor | Búsqueda en su tienda online | Experimental; los precios online pueden ser de península |
-| Lidl | Página de ofertas semanales | Experimental: solo ofertas, no catálogo completo |
-| Aldi | Página de ofertas | Experimental: solo ofertas, no catálogo completo |
-| Chacón, Roper, Cinco Océanos | No publican precios online | Añádelos a mano en **Ajustes → Añadir precio a mano** |
+| Mercadona | Catálogo completo de su tienda online (almacén de Lanzarote) | Canarias, todos los productos |
+| HiperDino | Catálogo completo de su tienda online (tienda c9503 = Lanzarote) | Canarias, todos los productos |
+| Aldi | Página de ofertas de la región Canarias | Canarias, solo ofertas de la semana |
+| Alcampo | Búsqueda en su tienda online (productos de config/productos.txt) | Precios de su tienda online de península |
+| Lidl | Manual | Su web no muestra precios para Canarias |
+| Carrefour | Manual | Su web bloquea las lecturas automáticas |
+| El Corte Inglés, Hipercor | Manual | Su web no devuelve resultados a lecturas automáticas |
+| Chacón, Roper, Cinco Océanos | Manual | No publican precios online |
 
 Si un supermercado falla en una lectura, la app conserva sus últimos precios conocidos y lo marca con ⚠️ en Ajustes.
 
@@ -67,7 +66,7 @@ Si un supermercado falla en una lectura, la app conserva sus últimos precios co
 
 ## Archivos de configuración
 
-- `config/ajustes.json` — código postal (35500 Arrecife; 35600 Puerto del Rosario).
+- `config/ajustes.json` — código postal e isla de HiperDino (Lanzarote: 35500 y c9503; Fuerteventura: 35600 y c9504).
 - `config/productos.txt` — productos que se buscan en las webs que no publican catálogo completo.
 - `config/alertas.txt` — productos vigilados para los avisos de ntfy.
 - `config/tiendas.json` — direcciones de cada web.

@@ -1,6 +1,9 @@
 // Recolector de precios: lo ejecuta GitHub Actions cada día y guarda data/precios.json
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import mercadona from './tiendas/mercadona.mjs';
+import hiperdino from './tiendas/hiperdino.mjs';
+import alcampo from './tiendas/alcampo.mjs';
+import aldi from './tiendas/aldi.mjs';
 import { crearLector } from './tiendas/generico.mjs';
 
 const leerJson = async (ruta, porDefecto) => { try { return JSON.parse(await readFile(ruta, 'utf8')); } catch { return porDefecto; } };
@@ -19,8 +22,9 @@ const terminos = (await leerLineas('config/productos.txt')).map(l => {
 });
 const anterior = await leerJson('data/precios.json', { productos: [], fuentes: {} });
 
-const lectores = { mercadona };
-for (const [id, cfg] of Object.entries(configTiendas)) if (!id.startsWith('_')) lectores[id] = crearLector(id, cfg);
+const lectores = { mercadona, hiperdino, alcampo, aldi };
+// Webs adicionales configurables a mano en config/tiendas.json (lector genérico)
+for (const [id, cfg] of Object.entries(configTiendas)) if (!id.startsWith('_') && !lectores[id]) lectores[id] = crearLector(id, cfg);
 
 // Se puede limitar a algunas tiendas: SOLO=mercadona,lidl node scraper/index.mjs
 const solo = process.env.SOLO ? process.env.SOLO.split(',') : null;

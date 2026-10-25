@@ -1,5 +1,6 @@
 {
   "zona": "Lanzarote / Fuerteventura",
   "codigoPostal": "35500",
-  "_nota": "35500 = Arrecife (Lanzarote). Para Fuerteventura usa por ejemplo 35600 (Puerto del Rosario)."
+  "hiperdinoTienda": "c9503",
+  "_nota": "Lanzarote: codigoPostal 35500 y hiperdinoTienda c9503. Fuerteventura: 35600 y c9504. Gran Canaria: c9495."
 }
