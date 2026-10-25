@@ -1,4 +1,12 @@
-# Productos que vigilas. Si alguno aparece en oferta, recibirás un aviso en el móvil (app ntfy).
-# Uno por línea. Puedes copiar la lista desde la app (Alertas → Copiar lista para el servidor).
+Pan
 aceite de oliva
 leche
+café molido
+harina integral
+harina blanca
+harina espelta
+carne de pollo
+carne de vacuno
+carne de cerdo
+pasta
+agua
